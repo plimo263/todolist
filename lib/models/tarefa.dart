@@ -4,7 +4,7 @@ class Tarefa {
 
   Tarefa(this.titulo, this.concluido);
 
-  set setConculida(inConcluido) => concluido = inConcluido;
+  set setConcluido(bool inConcluido) => concluido = inConcluido;
 
   @override
   String toString() {

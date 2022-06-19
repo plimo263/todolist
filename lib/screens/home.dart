@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todolist/components/add_tarefa_dialog.dart';
 import 'package:todolist/components/tarefa.dart';
 import 'package:todolist/models/tarefa.dart';
 
@@ -12,7 +13,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  Tarefa tarefa = Tarefa('Arrumar casa', false);
+  List<Tarefa> tarefa = [];
 
   @override
   Widget build(BuildContext context) {
@@ -20,19 +21,35 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [
-          TarefaWidget(
-            tarefa: tarefa,
+      body: ListView.builder(
+        itemBuilder: (inContext, index) {
+          return TarefaWidget(
+            tarefa: tarefa[index],
             onClick: (inValue) {
-              tarefa.setConculida = inValue;
-              setState(() {});
+              if (inValue != null) {
+                setState(() {
+                  tarefa[index].concluido = inValue;
+                });
+              }
             },
-          )
-        ],
+          );
+        },
+        itemCount: tarefa.length,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () async {
+          await showDialog(
+              context: context,
+              builder: (inContext) {
+                return const AddTarefaDialog();
+              }).then((value) {
+            if (value != null && value is Tarefa) {
+              setState(() {
+                tarefa.add(value);
+              });
+            }
+          });
+        },
         child: const Icon(Icons.add),
       ),
     );

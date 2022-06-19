@@ -9,6 +9,16 @@ Versão: 1.0
 
 ### Snapshot da tela
 
+![img](./snapshot/tela1.png)
+
+#### Adicionando uma tarefa
+
+![img](./snapshot/tela2.png)
+
+### Visualizando a tarefa inclusa
+
+![img](./snapshot/tela3.png)
+
 #### Avisos
 
-Este é um projeto publico, podendo ser utilizado por qualquer um que tenha interesse precisar pagar nada.
+Este é um projeto publico, podendo ser utilizado por qualquer um que tenha interesse, sem precisar pagar nada por isto.

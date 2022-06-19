@@ -15,7 +15,7 @@ class TodoApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       debugShowCheckedModeBanner: false,
-      home: Home(
+      home: const Home(
         title: 'To-do App',
       ),
     );
