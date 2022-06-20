@@ -3,9 +3,18 @@
 Este é um aplicativo simples feito em Flutter que irá permitir ao usuário criar uma lista de
 tarefas. O usuário poderá incluir as tarefas a serem feitas e marcar estas tarefas como concluidas.
 
-Versão: 1.0
+Historico de Versão:
 
-- Cria uma tarefa e a marca como concluída, ela ainda não persiste no aparelho é somente temporária.
+- 1.0 19-06-2022
+- 1.1 20-06-2022 (atual)
+
+---
+
+Este aplicativo consegue
+
+- Criar uma tarefa e já marcar como concluida
+- Criar marcar / desmarcar uma tarefa como concluida
+- Excluir uma tarefa pré-selecionada
 
 ### Snapshot da tela
 
