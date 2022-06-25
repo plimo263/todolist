@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todolist/models/tarefas.dart';
 import 'package:todolist/screens/home.dart';
 
 void main() {
-  runApp(const TodoApp());
+  runApp(
+    ChangeNotifierProvider(
+      builder: (context, child) {
+        return const TodoApp();
+      },
+      create: (context) => Tarefas(),
+    ),
+  );
 }
 
 class TodoApp extends StatelessWidget {
