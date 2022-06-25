@@ -6,7 +6,8 @@ tarefas. O usuário poderá incluir as tarefas a serem feitas e marcar estas tar
 Historico de Versão:
 
 - 1.0 19-06-2022
-- 1.1 20-06-2022 (atual)
+- 1.1 20-06-2022
+- 1.2 25-06-2022 (atual)
 
 ---
 
@@ -28,6 +29,16 @@ Este aplicativo consegue
 
 ![img](./snapshot/tela3.png)
 
+### Marcando para exclusão
+
+![img](./snapshot/tela4.png)
+
+### Vendo a tarefa excluida na tela
+
+![img](./snapshot/tela5.png)
+
 #### Avisos
 
 Este é um projeto publico, podendo ser utilizado por qualquer um que tenha interesse, sem precisar pagar nada por isto.
+
+Ele exibe conceitos iniciais de trabalho com Provider (gerencia de estado), banco de dados Sqflite e como lidar com este fluxo entre Provider e Sqflite.

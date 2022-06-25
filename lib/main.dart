@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todolist/database/tarefas_dao.dart';
+import 'package:todolist/models/tarefa.dart';
 import 'package:todolist/models/tarefas.dart';
 import 'package:todolist/screens/home.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  List<Tarefa> tarefas = await TarefasDao().findAll();
+
   runApp(
     ChangeNotifierProvider(
       builder: (context, child) {
         return const TodoApp();
       },
-      create: (context) => Tarefas(),
+      create: (context) => Tarefas(tarefas: tarefas),
     ),
   );
 }

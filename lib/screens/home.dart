@@ -39,7 +39,8 @@ class Home extends StatelessWidget {
                 },
                 onClick: (inValue) {
                   if (inValue != null) {
-                    tarefas.concluido(index, inValue);
+                    tarefas.concluido(
+                        index, inValue, tarefas.tarefas[index].id);
                   }
                 },
               );
